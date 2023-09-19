@@ -19,12 +19,14 @@ const Sidebar = () => {
       <SidebarOption Icon={HomeIcon} title='Home' />
       <SidebarOption Icon={SearchIcon} title='Search' />
       <SidebarOption Icon={LibraryMusicIcon} title='Your Library' />
+
       <br />
       <strong className='sidebar__title'>PLAYLISTS</strong>
       <hr />
-      {playlists.map(({ name, id }) => (
-        <SidebarOption title={name} />
-        //console.log(playlist)
+
+      {playlists?.items?.map((playlist) => (
+        // console.log(playlist)
+        <SidebarOption title={playlist.name} />
       ))}
     </div>
   );
