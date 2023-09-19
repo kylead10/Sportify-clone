@@ -22,6 +22,10 @@ const Sidebar = () => {
       <br />
       <strong className='sidebar__title'>PLAYLISTS</strong>
       <hr />
+      {playlists.map(({ name, id }) => (
+        <SidebarOption title={name} />
+        //console.log(playlist)
+      ))}
     </div>
   );
 };
